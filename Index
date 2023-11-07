@@ -1,0 +1,16 @@
+void add(int *x, int *y)// 3. 函式內的引數
+{
+    printf("sum = %d\n", *x + *y); //指標指向的數值相加
+}
+int main()
+{
+    int num1 = 2, num2 = 3;
+    printf("&num1 = %p\n", &num1); //  &num1 = 0x7fff34867b50
+    int *pi_1, *pi_2;              // 2.宣告指向整數的指標
+    pi_1 = &num1;                  //用指標pi_1指向num1的位址
+    pi_2 = &num2;                 //用指標pi_2指向num2的位址
+    printf("pi_1 = %d\n", *pi_1); // pi_1 = 2   （4.用*取指標指向變數的值）
+    printf("&pi_1 = %p\n", &pi_1); // &pi_1 = 0x7ffe140a9f68
+    add(pi_1, pi_2);               // sum = 5
+}
+
